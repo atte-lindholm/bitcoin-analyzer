@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\T3.1 BLAZOR APP.props" />
+</Project>

@@ -1,0 +1,47 @@
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\bin\Debug\net7.0\appsettings.Development.json
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\bin\Debug\net7.0\appsettings.json
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\bin\Debug\net7.0\T3.1 BLAZOR APP.staticwebassets.runtime.json
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\bin\Debug\net7.0\T3.1 BLAZOR APP.exe
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\bin\Debug\net7.0\T3.1 BLAZOR APP.deps.json
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\bin\Debug\net7.0\T3.1 BLAZOR APP.runtimeconfig.json
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\bin\Debug\net7.0\T3.1 BLAZOR APP.dll
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\bin\Debug\net7.0\T3.1 BLAZOR APP.pdb
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\bin\Debug\net7.0\Blazor-ApexCharts.dll
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\bin\Debug\net7.0\ChartJs.Blazor.dll
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\bin\Debug\net7.0\Microsoft.Extensions.Configuration.dll
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\bin\Debug\net7.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Json.dll
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Physical.dll
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\bin\Debug\net7.0\Microsoft.Extensions.FileSystemGlobbing.dll
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\bin\Debug\net7.0\Newtonsoft.Json.dll
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\bin\Debug\net7.0\System.Text.Encodings.Web.dll
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\bin\Debug\net7.0\System.Text.Json.dll
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\bin\Debug\net7.0\runtimes\browser\lib\net7.0\System.Text.Encodings.Web.dll
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\obj\Debug\net7.0\T3.1 BLAZOR APP.csproj.AssemblyReference.cache
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\obj\Debug\net7.0\T3.1 BLAZOR APP.GeneratedMSBuildEditorConfig.editorconfig
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\obj\Debug\net7.0\T3.1 BLAZOR APP.AssemblyInfoInputs.cache
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\obj\Debug\net7.0\T3.1 BLAZOR APP.AssemblyInfo.cs
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\obj\Debug\net7.0\T3.1 BLAZOR APP.csproj.CoreCompileInputs.cache
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\obj\Debug\net7.0\T3.1 BLAZOR APP.MvcApplicationPartsAssemblyInfo.cache
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\obj\Debug\net7.0\T3.1 BLAZOR APP.RazorAssemblyInfo.cache
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\obj\Debug\net7.0\T3.1 BLAZOR APP.RazorAssemblyInfo.cs
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\obj\Debug\net7.0\staticwebassets\msbuild.T3.1 BLAZOR APP.Microsoft.AspNetCore.StaticWebAssets.props
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\obj\Debug\net7.0\staticwebassets\msbuild.build.T3.1 BLAZOR APP.props
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.T3.1 BLAZOR APP.props
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.T3.1 BLAZOR APP.props
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\obj\Debug\net7.0\staticwebassets.pack.json
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\obj\Debug\net7.0\staticwebassets.build.json
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\obj\Debug\net7.0\staticwebassets.development.json
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\obj\Debug\net7.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\obj\Debug\net7.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\obj\Debug\net7.0\scopedcss\bundle\T3.1 BLAZOR APP.styles.css
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\obj\Debug\net7.0\scopedcss\projectbundle\T3.1 BLAZOR APP.bundle.scp.css
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\obj\Debug\net7.0\T3.1 BLAZOR APP.csproj.CopyComplete
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\obj\Debug\net7.0\T3.1 BLAZOR APP.dll
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\obj\Debug\net7.0\refint\T3.1 BLAZOR APP.dll
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\obj\Debug\net7.0\T3.1 BLAZOR APP.pdb
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\obj\Debug\net7.0\T3.1 BLAZOR APP.genruntimeconfig.cache
+E:\repos\rajapinnat-brain-dead-sodium-chloride\T3\T3.1 BLAZOR APP\obj\Debug\net7.0\ref\T3.1 BLAZOR APP.dll

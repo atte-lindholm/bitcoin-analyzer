@@ -1,0 +1,261 @@
+﻿@page "/bitcoin-analyzer"
+@using System
+@using System.Collections.Generic
+@using System.Net.Http
+@using System.Threading.Tasks
+@using Newtonsoft.Json
+@inject BearishTrendService bearishTrendService
+@inject VolumeService volumeService
+@inject BuySellService buySellService
+
+
+
+<h3>Date Range</h3>
+<div>
+    Start Date: <input type="date" @bind="startDate" /><br />
+    End Date: <input type="date" @bind="endDate" /><br />
+    <button @onclick="AnalyzeDateRange">Analyze</button>
+</div>
+
+@if (isLoading)
+{
+    <p>Loading...</p>
+}
+else if (analyzed)
+{
+    <h3>Longest Bearish Trend</h3>
+    <div>
+        @if (bearishTrend.HasValue)
+        {
+            <p>The longest bearish trend within the given date range is @bearishTrend.Value days.</p>
+        }
+        else
+        {
+            <p>No data available for bearish trend analysis.</p>
+        }
+    </div>
+
+    <hr />
+
+    <h3>Highest Trading Volume</h3>
+    <div>
+        @if (highestVolumeDate.HasValue && volume.HasValue)
+        {
+            <p>The date with the highest trading volume is @highestVolumeDate.Value.ToShortDateString() with a volume of @volume.Value euros.</p>
+        }
+        else
+        {
+            <p>No data available for volume analysis.</p>
+        }
+    </div>
+
+    <hr />
+
+    <h3>Best Buy/Sell Dates</h3>
+    <div>
+        @if (bestBuyDate.HasValue && bestSellDate.HasValue)
+        {
+            <p>The best day to buy bitcoin is @bestBuyDate.Value.ToShortDateString().</p>
+            <p>The best day to sell bitcoin is @bestSellDate.Value.ToShortDateString().</p>
+        }
+        else
+        {
+            <p>No data available for buy/sell analysis.</p>
+        }
+    </div>
+
+    <div>
+        <h3>Price Chart</h3>
+        <ApexChart TItem="DataPoint">
+            <ApexPointSeries TItem="DataPoint" Items="Prices" Name="Bitcoin Price" SeriesType="SeriesType.Line" XValue="@(e => e.X)" YValue="@(e => e.Y)" />
+        </ApexChart>
+    </div>
+
+    <hr />
+}
+
+@code {
+    private DateTime startDate;
+    private DateTime endDate;
+    private bool analyzed = false;
+    private bool isLoading = false;
+
+    private int? bearishTrend;
+    private DateTime? highestVolumeDate;
+    private double? volume;
+    private DateTime? bestBuyDate;
+    private DateTime? bestSellDate;
+
+    private List<DataPoint> Prices { get; set; } = new List<DataPoint>();
+
+
+    private HttpClient httpClient;
+
+    protected override Task OnInitializedAsync()
+    {
+        httpClient = new HttpClient();
+        return Task.CompletedTask;
+    }
+
+    private async Task AnalyzeDateRange()
+    {
+        isLoading = true;
+
+        var chartData = await GetChartData(startDate, endDate);
+
+        // A. Longest Bearish Trend
+        bearishTrend = await bearishTrendService.GetLongestBearishTrend(chartData);
+
+        // B. Highest Trading Volume
+        var prices = chartData?.Prices;
+
+        // Clear existing data
+        Prices.Clear();
+
+        if (prices != null && prices.Count > 0)
+        {
+            (highestVolumeDate, volume) = volumeService.GetHighestVolume(prices);
+
+            // Mapping prices to DataPoint for ApexChart
+            Prices.AddRange(prices.Select(p => new DataPoint
+                {
+                    X = DateTimeOffset.FromUnixTimeMilliseconds((long)p[0]).DateTime,
+                    Y = (decimal?)p[1] // Ensure p[1] is of type decimal?
+                }));
+        }
+        else
+        {
+            highestVolumeDate = null;
+            volume = null;
+        }
+
+
+        // C. Best Buy/Sell Dates
+        (bestBuyDate, bestSellDate) = await buySellService.GetBestBuySellDates(chartData);
+
+        // Rest of your analysis code...
+
+        analyzed = true;
+        isLoading = false;
+    }
+
+
+    private async Task<ChartData> GetChartData(DateTime startDate, DateTime endDate)
+    {
+        var startTimestamp = new DateTimeOffset(startDate).ToUnixTimeSeconds();
+        var endTimestamp = new DateTimeOffset(endDate).ToUnixTimeSeconds();
+        var url = $"https://api.coingecko.com/api/v3/coins/bitcoin/market_chart/range?vs_currency=eur&from={startTimestamp}&to={endTimestamp}";
+
+        try
+        {
+            var response = await httpClient.GetAsync(url);
+            response.EnsureSuccessStatusCode(); // Ensure the request was successful
+            var json = await response.Content.ReadAsStringAsync();
+            var data = JsonConvert.DeserializeObject<ChartData>(json);
+
+            return data;
+        }
+        catch (HttpRequestException ex)
+        {
+            // Handle exceptions here
+            Console.WriteLine($"HTTP Request Error: {ex.Message}");
+            return null;
+        }
+    }
+
+    public class DataPoint
+    {
+        public DateTime X { get; set; }
+        public decimal? Y { get; set; }
+    }
+
+    public class BearishTrendService
+    {
+        public async Task<int> GetLongestBearishTrend(ChartData chartData)
+        {
+            var prices = chartData.Prices;
+            var numDays = prices.Count;
+            var maxBearishTrend = 0;
+            var bearishTrend = 0;
+
+            for (var i = 1; i < numDays; i++)
+            {
+                if (prices[i][1] < prices[i - 1][1])
+                {
+                    bearishTrend++;
+                    maxBearishTrend = Math.Max(maxBearishTrend, bearishTrend);
+                }
+                else
+                {
+                    bearishTrend = 0;
+                }
+            }
+
+            return maxBearishTrend;
+        }
+    }
+
+    public class BuySellService
+    {
+        public async Task<(DateTime?, DateTime?)> GetBestBuySellDates(ChartData chartData)
+        {
+            var prices = chartData?.Prices;
+            var numDays = prices?.Count;
+
+            // Check if prices are null or empty
+            if (prices == null || numDays == 0)
+            {
+                // If the price data is missing or empty, return indicative output
+                return (null, null);
+            }
+
+            var bestBuyDate = DateTimeOffset.FromUnixTimeMilliseconds((long)prices[0][0]).DateTime;
+            var bestSellDate = DateTimeOffset.FromUnixTimeMilliseconds((long)prices[0][0]).DateTime;
+            var maxProfit = 0.0;
+
+            for (var i = 0; i < numDays; i++)
+            {
+                for (var j = i + 1; j < numDays; j++)
+                {
+                    var profit = prices[j][1] - prices[i][1];
+                    if (profit > maxProfit)
+                    {
+                        maxProfit = profit;
+                        bestBuyDate = DateTimeOffset.FromUnixTimeMilliseconds((long)prices[i][0]).DateTime;
+                        bestSellDate = DateTimeOffset.FromUnixTimeMilliseconds((long)prices[j][0]).DateTime;
+                    }
+                }
+            }
+
+            return (bestBuyDate, bestSellDate);
+        }
+    }
+
+    public class VolumeService
+    {
+        public (DateTime?, double?) GetHighestVolume(List<List<double>> prices)
+        {
+            if (prices == null || prices.Count == 0)
+            {
+                return (null, null);
+            }
+
+            var maxVolumeEntry = prices.Aggregate((max, next) => next[1] > max[1] ? next : max);
+
+            if (maxVolumeEntry.Count > 1)
+            {
+                var highestVolumeDate = DateTimeOffset.FromUnixTimeMilliseconds((long)maxVolumeEntry[0]).DateTime;
+                var volume = maxVolumeEntry[1];
+
+                return (highestVolumeDate, volume);
+            }
+
+            return (null, null);
+        }
+    }
+
+    public class ChartData
+    {
+        public List<List<double>> Prices { get; set; }
+    }
+}

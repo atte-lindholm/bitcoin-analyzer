@@ -1,0 +1,77 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\repos\\rajapinnat-brain-dead-sodium-chloride\\T3\\T3.1 BLAZOR APP\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\T3.1 BLAZOR APP.bundle.scp.css",
+      "PackagePath": "staticwebassets\\T3.1 BLAZOR APP.bundle.scp.css"
+    },
+    {
+      "Id": "E:\\repos\\rajapinnat-brain-dead-sodium-chloride\\T3\\T3.1 BLAZOR APP\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\repos\\rajapinnat-brain-dead-sodium-chloride\\T3\\T3.1 BLAZOR APP\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "E:\\repos\\rajapinnat-brain-dead-sodium-chloride\\T3\\T3.1 BLAZOR APP\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "E:\\repos\\rajapinnat-brain-dead-sodium-chloride\\T3\\T3.1 BLAZOR APP\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "E:\\repos\\rajapinnat-brain-dead-sodium-chloride\\T3\\T3.1 BLAZOR APP\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "E:\\repos\\rajapinnat-brain-dead-sodium-chloride\\T3\\T3.1 BLAZOR APP\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\repos\\rajapinnat-brain-dead-sodium-chloride\\T3\\T3.1 BLAZOR APP\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "E:\\repos\\rajapinnat-brain-dead-sodium-chloride\\T3\\T3.1 BLAZOR APP\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "E:\\repos\\rajapinnat-brain-dead-sodium-chloride\\T3\\T3.1 BLAZOR APP\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "E:\\repos\\rajapinnat-brain-dead-sodium-chloride\\T3\\T3.1 BLAZOR APP\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "E:\\repos\\rajapinnat-brain-dead-sodium-chloride\\T3\\T3.1 BLAZOR APP\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "E:\\repos\\rajapinnat-brain-dead-sodium-chloride\\T3\\T3.1 BLAZOR APP\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "E:\\repos\\rajapinnat-brain-dead-sodium-chloride\\T3\\T3.1 BLAZOR APP\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.T3.1 BLAZOR APP.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.T3.1 BLAZOR APP.props",
+      "PackagePath": "build\\T3.1 BLAZOR APP.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.T3.1 BLAZOR APP.props",
+      "PackagePath": "buildMultiTargeting\\T3.1 BLAZOR APP.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.T3.1 BLAZOR APP.props",
+      "PackagePath": "buildTransitive\\T3.1 BLAZOR APP.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
